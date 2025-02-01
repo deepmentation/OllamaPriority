@@ -24,6 +24,18 @@ class Module extends Extension
             \Modules\OllamaPriority\Http\Middleware\ProcessIncomingMail::class
         );
 
+        // Menüpunkt für die Konfiguration hinzufügen
+        \Eventy::addFilter('menu.manage', function($menu) {
+            $menu[] = [
+                'key' => 'ollamapriority',
+                'name' => __('Ollama Priority'),
+                'url' => route('ollamapriority.config'),
+                'icon' => 'flag',
+                'position' => 900,
+            ];
+            return $menu;
+        }, 20, 1);
+
         // CSS für die Prioritätsanzeige laden
         \Eventy::addFilter('stylesheets', function($styles) {
             $styles[] = \Module::getPublicPath(self::NAME).'/css/priority.css';
@@ -59,6 +71,5 @@ class Module extends Extension
         $priorityClass = is_numeric($priority) ? 'priority-' . $priority : '';
         $html['priority'] = '<td class="conversation-priority ' . $priorityClass . '">'.$priority.'</td>';
         return $html;
-    }
     }
 }

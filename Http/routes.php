@@ -11,9 +11,9 @@
 |
 */
 
-Route::group(['prefix' => 'ollamapriority', 'middleware' => ['web', 'auth']], function() {
-    // Hier können später zusätzliche Routen hinzugefügt werden,
-    // z.B. für eine Konfigurationsoberfläche
+Route::group(['prefix' => 'ollamapriority', 'middleware' => ['web', 'auth', 'roles.manage']], function() {
+    Route::get('/config', ['uses' => 'OllamaPriorityController@showConfig', 'as' => 'ollamapriority.config']);
+    Route::post('/config', ['uses' => 'OllamaPriorityController@saveConfig', 'as' => 'ollamapriority.config.save']);
 });
 
 ?>
