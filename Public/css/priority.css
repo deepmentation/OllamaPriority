@@ -1,0 +1,37 @@
+/* Prioritätsspalte Styling */
+.conversation-priority {
+    text-align: center;
+    font-weight: bold;
+    width: 80px;
+}
+
+/* Prioritätsstufen */
+.conversation-priority:contains('1') {
+    color: #dc3545; /* Rot für höchste Priorität */
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.conversation-priority:contains('2') {
+    color: #fd7e14; /* Orange für hohe Priorität */
+    background-color: rgba(253, 126, 20, 0.1);
+}
+
+.conversation-priority:contains('3') {
+    color: #ffc107; /* Gelb für mittlere Priorität */
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.conversation-priority:contains('4') {
+    color: #28a745; /* Grün für niedrige Priorität */
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.conversation-priority:contains('5') {
+    color: #6c757d; /* Grau für niedrigste Priorität */
+    background-color: rgba(108, 117, 125, 0.1);
+}
+
+/* Hover-Effekt */
+.conversation-priority:hover {
+    opacity: 0.8;
+}
