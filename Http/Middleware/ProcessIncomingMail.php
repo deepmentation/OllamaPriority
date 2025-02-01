@@ -75,3 +75,5 @@ class ProcessIncomingMail
         return $next($request);
     }
 }
+
+?>
