@@ -1,0 +1,17 @@
+{
+    "name": "Ollama Priority",
+    "alias": "ollamapriority",
+    "description": "Verwendet Ollama zur automatischen Priorisierung von E-Mails basierend auf deren Inhalt",
+    "version": "1.0.0",
+    "keywords": ["ollama", "ai", "priority", "email"],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\OllamaPriority\\Providers\\OllamaPriorityServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

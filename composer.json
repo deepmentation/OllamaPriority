@@ -1,15 +1,19 @@
 {
     "name": "freescout/ollama-priority",
     "description": "Verwendet Ollama zur automatischen Priorisierung von E-Mails basierend auf deren Inhalt",
+    "keywords": ["freescout", "ollama", "ai", "priority", "email"],
+    "license": "MIT",
     "version": "1.0.0",
     "authors": [
         {
             "name": "Thomas Förster",
-            "email": "thomas@deepmentation.ai"
+            "email": "thomas@deepmentatio.ai"
         }
     ],
     "require": {
-        "php": ">=7.4"
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "laravel/framework": "^8.0|^9.0"
     },
     "extra": {
         "laravel": {
@@ -22,5 +26,6 @@
         "psr-4": {
             "Modules\\OllamaPriority\\": ""
         }
-    }
+    },
+    "minimum-stability": "stable"
 }

@@ -30,10 +30,10 @@ class ProcessIncomingMail
                 $analysisText = "Betreff: {$subject}\n\nInhalt:\n{$emailContent}";
                 
                 // Ollama API aufrufen
-                $response = Http::post(config('ollama_priority.server_url') . '/api/generate', [
-                    'model' => config('ollama_priority.model'),
+                $response = Http::post(config('ollamapriority.server_url.default') . '/api/generate', [
+                    'model' => config('ollamapriority.model.default'),
                     'prompt' => $analysisText,
-                    'system' => config('ollama_priority.system_prompt'),
+                    'system' => config('ollamapriority.system_prompt.default'),
                     'stream' => false
                 ]);
 
